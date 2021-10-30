@@ -5,6 +5,9 @@ en:
       category:
         one: Categoría
         others: Categorías
+      task:
+        one: Tarea
+        others: Tareas
   categories:
     form:
       name: Name
@@ -16,3 +19,8 @@ en:
   due_date: Due date
   hello: Hello world
   name: Name
+  task:
+    errors:
+      invalid_due_date: Invalid due date
+  tasks:
+    new_task: Nueva Tarea

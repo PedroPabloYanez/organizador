@@ -7,13 +7,11 @@ es:
         others: Categorías
       task:
         one: Tarea
-        others: Tareas  
+        others: Tareas
   categories:
     form:
       name: Nombre
     new_category: Nueva Categoría
-  tasks:
-    new_task: Nueva Tarea
   category: Categoría
   common:
     back: Atrás
@@ -21,4 +19,8 @@ es:
   due_date: Fecha término
   hello: Hello world
   name: Nombre
-  
+  task:
+    errors:
+      invalid_due_date: La fecha no puede estar en el pasado
+  tasks:
+    new_task: Nueva Tarea
