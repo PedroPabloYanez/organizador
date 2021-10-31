@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_31_002808) do
+ActiveRecord::Schema.define(version: 2021_10_31_183231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_002808) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["task_id"], name: "index_participants_on_task_id"
+    t.index ["user_id", "task_id"], name: "index_participants_on_user_id_and_task_id", unique: true
     t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 2021_10_31_002808) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "owner_id", null: false
+    t.string "code"
     t.index ["category_id"], name: "index_tasks_on_category_id"
     t.index ["owner_id"], name: "index_tasks_on_owner_id"
   end
